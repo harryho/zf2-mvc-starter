@@ -15,29 +15,25 @@ Installation
 Using Composer (recommended)
 ---
 
-The recommended way to get a working copy of this project is to clone the repository
-and use `composer` to install dependencies using the `create-project` command:
-
-* Linux/Unix 
-
-```bash
-    curl -s https://getcomposer.org/installer | php --
-    php composer.phar create-project -sdev --repository-url="https://packages.zendframework.com" zendframework/skeleton-application path/to/install
-```
-
-* Windows
-    * Download and install php on your computer. PHP 5.4.x or higher version should be fine. 
-    * Download and install composer 
-    * Setup php and composer on your PAHT environment variable.
+Please find instruction [here](https://harryho.github.io/blog/php-web/#composer)
 
 
-Update your zendframework comppnents
+Install or update your zendframework comppnents
 ---
 
+**Without composer installed**
 ```bash
     cd my/project/dir
+    curl -s https://getcomposer.org/installer | php --
     php composer.phar self-update
     php composer.phar install
+```
+
+**With composer installed**
+```bash
+    cd my/project/dir
+    composer self-update
+    composer install
 ```
 
 Mysql setup
@@ -90,14 +86,14 @@ Web Server Setup
 The simplest way to get started if you are using PHP 5.4 or above is to start the internal PHP cli-server in the root directory:
 
 
-**Windows**
+**Linux**
 ```bash
     php -S 0.0.0.0:8080 -t public/ public/index.php
 ```  
 
 **Windows**
 ```bash
-    php -S 0.0.0.0:8080 -t public\ public/index.php
+    php -S 0.0.0.0:8080 -t public public/index.php
 ```    
 
 This will start the cli-server on port 8080, and bind it to all network
